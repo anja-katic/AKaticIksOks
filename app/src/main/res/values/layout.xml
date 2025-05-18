@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:rowCount="3"
+        android:columnCount="3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/inputNumber"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView android:id="@+id/p1" style="@style/GameField"/>
+        <TextView android:id="@+id/p2" style="@style/GameField"/>
+        <TextView android:id="@+id/p3" style="@style/GameField"/>
+        <TextView android:id="@+id/p4" style="@style/GameField"/>
+        <TextView android:id="@+id/p5" style="@style/GameField"/>
+        <TextView android:id="@+id/p6" style="@style/GameField"/>
+        <TextView android:id="@+id/p7" style="@style/GameField"/>
+        <TextView android:id="@+id/p8" style="@style/GameField"/>
+        <TextView android:id="@+id/p9" style="@style/GameField"/>
+
+    </GridLayout>
+
+    <EditText
+        android:id="@+id/inputNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Unesi broj polja (1-9)"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/gridLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/colorButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Boji"
+        app:layout_constraintTop_toBottomOf="@id/inputNumber"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/resetButton"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Nova igra"
+        app:layout_constraintTop_toBottomOf="@id/inputNumber"
+        app:layout_constraintStart_toEndOf="@+id/colorButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
